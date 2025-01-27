@@ -1,0 +1,25 @@
+@use "@carbon/react/scss/themes" as *;
+@use "@carbon/react/scss/theme" as * with ($theme: $g10);
+@use "@carbon/react/scss/reset";
+@use "@carbon/react/scss/fonts";
+@use "@carbon/react/scss/utilities";
+@use "@carbon/react/scss/layer";
+
+
+//Carbon components styles
+@use "@carbon/react/scss/components/button";
+@use "@carbon/react/scss/components/loading";
+@use "@carbon/react/scss/components/list";
+@use "@carbon/react/scss/components/modal";
+@use "@carbon/react/scss/components/notification";
+
+
+// App styles
+@use "./app/TririgaUXWebApp";
+@use "./styles/page";
+@use "./components/Components";
+@use "./pages/Pages";
+
+[hidden] {
+  display: none !important;
+}

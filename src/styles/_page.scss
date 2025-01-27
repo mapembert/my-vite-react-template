@@ -1,0 +1,18 @@
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/spacing" as *;
+
+@mixin page {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-05;
+
+  &__header {
+    @include type-style("heading-03");
+    margin-bottom: $spacing-04;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+}

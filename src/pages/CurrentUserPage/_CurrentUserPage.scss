@@ -1,0 +1,13 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/type" as *;
+@use "../../styles/page" as *;
+
+.currentUserPage {
+  @include page;
+
+  &_list {
+    @include type-style("body-compact-02");
+    margin-bottom: $spacing-04;
+    padding-left: $spacing-04;
+  }
+}

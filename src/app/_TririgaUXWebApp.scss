@@ -1,0 +1,54 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/config" as *;
+
+.tririgaUXWebApp {
+  -webkit-text-size-adjust: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+
+  &>div {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  & :not(.#{$prefix}--side-nav--expanded).#{$prefix}--side-nav:hover {
+    width: 0;
+  }
+
+  & :not(.#{$prefix}--side-nav--expanded).#{$prefix}--side-nav--hidden {
+    width: 0;
+  }
+
+  &>.#{$prefix}--header {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &>.#{$prefix}--header>.#{$prefix}--header__name {
+    font-size: 16px;
+  }
+}
+
+.showAppMessages {
+  &__toast {
+    position: fixed;
+    top: $spacing-10;
+    z-index: z("overlay");
+    width: auto;
+    left: $spacing-05;
+    right: $spacing-05;
+    margin: 0;
+  }
+
+  &__modal .#{$prefix}--modal-close,
+  &__modal .#{$prefix}--btn--secondary {
+    display: none;
+  }
+}

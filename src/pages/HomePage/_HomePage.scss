@@ -1,0 +1,5 @@
+@use "../../styles/page";
+
+.homePage {
+  @include page.page;
+}

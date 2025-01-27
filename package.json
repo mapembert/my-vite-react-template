@@ -1,0 +1,75 @@
+{
+  "name": "trivite-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@carbon/icons-react": "^11.53.0",
+    "@carbon/react": "^1.74.0",
+    "@carbon/themes": "^11.45.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tririga/tririga-react-components": "^1.5.1",
+    "classnames": "^2.5.1",
+    "env-cmd": "^10.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.2",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.64.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "env-cmd -x -f ./.env.development.local tri-deploy -t $REACT_APP_TRIRIGA_URL -u $TRIRIGA_USER -p $TRIRIGA_PASSWORD -w -m 3",
+    "build:deploy": "npm run build && npm run deploy",
+    "lint": "./node_modules/.bin/eslint src",
+    "lint-fix": "./node_modules/.bin/eslint --fix src --ext .js",
+    "pretty-quick": "pretty-quick"
+  },
+  "eslintConfig": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.26.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.26.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-react": "^13.0.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.37.4",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "pretty-quick": "^3.3.1",
+    "vite": "^6.0.11",
+    "vite-plugin-svgr": "^4.3.0"
+  },
+  "homepage": ".",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty-quick && npm run lint",
+      "pre-push": "npm run lint"
+    }
+  }
+}
