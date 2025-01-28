@@ -7,6 +7,7 @@ Installation is simple. It's not like a traditional npm create-react-app install
 This is beta!
 
 ## First Steps - Get the code
+In the below example keep 'vite-app-from-template' if you are testing this or change it to match your new application view name!
 ```
 git clone https://github.com/mapembert/my-vite-react-template.git vite-app-from-template
 cd vite-app-from-template
