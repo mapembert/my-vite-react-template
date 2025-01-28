@@ -14,7 +14,7 @@ cd vite-app-from-template
 npm install
 ```
 ## Optional - Running the demo app
-If you want to run the demo app, you can but it either requires you to set up the TRIRIGA application in your environment:
+If you want to run the demo app it requires you to set up the TRIRIGA application in your environment. If you are using this template for a new application you may want to skip to step 2 and update the configuration accordingly.
 1. Install the TRIRIGA Object Migration Package
 Object migrate the file "TRIRIGA_OM_ImportMeFirst.zip" into your TRIRIGA instance. This will create the necessary objects for the demo app to work.
 
